@@ -78,9 +78,13 @@
   <target name="AIMergerApp">
     <ant inheritAll="false" useNativeBasedir="true" dir="aimerger" target="AIMergerApp"/>
   </target>
-  
+
   <target name="devmode" depends="noplay">
     <ant inheritAll="false" useNativeBasedir="true" dir="appengine" target="devmode"/>
+  </target>
+
+  <target name="MakeYaCSS">
+    <ant inheritAll="false" useNativeBasedir="true" dir="appengine" target="MakeYaCSS"/>
   </target>
 
   <!-- Convenient target for just running the blockly related tests -->
