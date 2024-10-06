@@ -654,6 +654,20 @@
     </java>
   </target>
 
+  <target name="MakeYaCSS"
+          description="Compile TailwindCSS directives to CSS">
+          <!-- depends="YaClientApp"
+          unless="YaClientApp.uptodate">
+        -->
+    <exec executable="${appinventor.dir}/node_modules/.bin/postcss.cmd">
+     <arg value="${build.static.dir}/css/tailwind.css"/>
+     <arg value="-o"/>
+     <arg value="${build.static.dir}/css/yatailwind.css"/>
+     <arg value="--config"/>
+     <arg value="${build.war.dir}/postcss.config.js"/>
+   </exec>
+  </target>
+
   <!-- =====================================================================
        AiClientLibTests: build and run the AiClientLib tests and generate the output results
        ===================================================================== -->
